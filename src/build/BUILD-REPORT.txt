@@ -1,0 +1,367 @@
+== MS-DOS 4.00 build walkthrough — 2026-11-03 13:59:55 — host ThinkPad-T490 ==
+tree: /home/user/storage/microsoft/mydos/v4.0/src
+mode: WALKTHROUGH_INCREMENTAL=0
+== Phase 0: preflight ==
+[PASS] preflight: host tools + shipped TOOLS/ + drivers present missing host tools: none; missing tree files: none
+versions: mcopy (GNU mtools) 4.0.49 | mkfs.fat 4.2 (2021-01-31) | Python 3.14.4 | DOSBox-X version 2026.01.02 SDL2, copyright 2011-2026 The DOSBox-X Team.
+== Phase 1: source state ==
+[PASS] mojibake-free sources 
+[PASS] SELECT2.ASM within 80 cols 
+[PASS] USA.INF == PANEL.INF 
+CRLF-OK (all DOS-read files)
+[PASS] CRLF complete for DOS-read files (details/repairs in build/BUILD-REPORT.txt)
+== Phase 2: full build (DOSBox-X, unattended) ==
+=== reset-clean: /home/user/storage/microsoft/mydos/v4.0/src ===
+deleted build outputs: 751
+done. Next: ./build-msdos.sh (from-scratch; expect ~54 non-empty build/log/M-*.TXT on success)
+>>> Running DOSBox-X build (this takes a few minutes)...
+LOG: Early LOG Init complete
+LOG: CONFIG: Loaded config file: ./build/_dosbox-x.conf
+LOG: DOSBox-X's working directory: /home/user/storage/microsoft/mydos/v4.0/src
+LOG: Logging init: beginning logging proper. This is the end of the early init logging
+LOG: Logging: No logfile was given. All further logging will be discarded.
+LOG: DOSBox-X version 2026.01.02 Commit 59915c1 (Linux SDL2 64-bit)
+LOG: Prevent capture: 0
+LOG: SDL: version 2.32.10, Video x11, Audio pulseaudio
+LOG: Host keyboard layout is now  ()
+LOG: Mapper keyboard layout is now  ()
+LOG: SDL2 reports desktop display mode 3072 x 1728
+LOG: The default output for the video system: opengl
+LOG: OpenGL Version : 4.6 (Compatibility Profile) Mesa 26.0.8-1ubuntu0.3
+LOG: Configured windowposition: -
+LOG: SDL: Current window pixel format: SDL_PIXELFORMAT_RGB888
+LOG: SDL: You are running in 24 bpp mode, this will slow down things!
+LOG: Releasing keyboard
+LOG: X11 main window is 640 x 400 maximized=0
+LOG: X11 extension XRANDR is available
+LOG: XRandR CRTC 0: pos=(0,0) size=(3072,1728) outputs=1
+LOG: Our window lies on this CRTC display (window pos=(1166,614) size=(640,400) match=(1486,814)).
+LOG:   Goes to output 0: name='eDP-1' size_mm=(310 x 170)
+LOG: Screen report: Method 'XRandR' (3072.000 x 1728.000 pixels) at (0.000 x 0.000) (310.000 x 170.000 mm) (12.205 x 6.693 in) (251.706 x 258.184 DPI)
+LOG: WARNING: DOS/V is only supported for VGA video cards.
+LOG: ISA BCLK: 8333333.333Hz (25000000/3)
+LOG: monopal: green, 
+LOG: Active save slot: 1 [Empty]
+LOG: USING AVI+ZMBV
+LOG: Max 1073741824 sz 16384
+LOG: Final 16384
+LOG: Final arrangement: Below 4GB = 16384KB, Above 4GB = 0KB
+LOG: MIDI:Opened device:none
+LOG: VOODOO LFB now at d0000000
+LOG: Parallel1: BASE 378h
+LOG: MPU-401 Registering I/O ports as if IBM PC MPU-401 at base 330h
+LOG: Memory I/O complexity optimization enabled aka option 'memory io optimization 1'. If the game or demo is unable to draw to the screen properly, set the option to false.
+LOG: The 'scanline render on demand' option is available and may provide a modest boost in video render performance if set to true.
+LOG: GetDesktopResolution reading X11 desktop resolution
+LOG: Root window (ID 1033) is 3072 x 1728
+LOG: X11 main window is 640 x 400 maximized=0
+LOG: XRandR CRTC 0: pos=(0,0) size=(3072,1728) outputs=1
+LOG: Our window lies on this CRTC display (window pos=(1166,614) size=(640,400) match=(1486,814)).
+LOG:   Goes to output 0: name='eDP-1' size_mm=(310 x 170)
+LOG: Screen report: Method 'XRandR' (3072.000 x 1728.000 pixels) at (0.000 x 0.000) (310.000 x 170.000 mm) (12.205 x 6.693 in) (251.706 x 258.184 DPI)
+LOG: Allocated APM BIOS pm entry point at f000:ce20
+LOG: Writing code to fce20
+LOG: Writing code to fce40
+LOG: X11 main window is 640 x 400 maximized=0
+LOG: XRandR CRTC 0: pos=(0,0) size=(3072,1728) outputs=1
+LOG: Our window lies on this CRTC display (window pos=(1166,540) size=(640,400) match=(1486,740)).
+LOG:   Goes to output 0: name='eDP-1' size_mm=(310 x 170)
+LOG: Screen report: Method 'XRandR' (3072.000 x 1728.000 pixels) at (0.000 x 0.000) (310.000 x 170.000 mm) (12.205 x 6.693 in) (251.706 x 258.184 DPI)
+LOG: ISA Plug & Play BIOS enabled
+LOG: pixratio 1.200, dw false, dh true
+LOG: Aspect ratio: 640 x 480  xToY=1.333 yToX=0.750
+LOG: menuScale=1
+LOG: X11 main window is 640 x 498 maximized=0
+LOG: XRandR CRTC 0: pos=(0,0) size=(3072,1728) outputs=1
+LOG: Our window lies on this CRTC display (window pos=(1166,540) size=(640,498) match=(1486,789)).
+LOG:   Goes to output 0: name='eDP-1' size_mm=(310 x 170)
+LOG: Screen report: Method 'XRandR' (3072.000 x 1728.000 pixels) at (0.000 x 0.000) (310.000 x 170.000 mm) (12.205 x 6.693 in) (251.706 x 258.184 DPI)
+LOG: font texture id=2 will make 128 x 256
+LOG: X11 main window is 640 x 498 maximized=0
+LOG: XRandR CRTC 0: pos=(0,0) size=(3072,1728) outputs=1
+LOG: Our window lies on this CRTC display (window pos=(1166,540) size=(640,498) match=(1486,789)).
+LOG:   Goes to output 0: name='eDP-1' size_mm=(310 x 170)
+LOG: Screen report: Method 'XRandR' (3072.000 x 1728.000 pixels) at (0.000 x 0.000) (310.000 x 170.000 mm) (12.205 x 6.693 in) (251.706 x 258.184 DPI)
+LOG: X11 main window is 640 x 498 maximized=0
+LOG: XRandR CRTC 0: pos=(0,0) size=(3072,1728) outputs=1
+LOG: Our window lies on this CRTC display (window pos=(1166,540) size=(640,498) match=(1486,789)).
+LOG:   Goes to output 0: name='eDP-1' size_mm=(310 x 170)
+LOG: Screen report: Method 'XRandR' (3072.000 x 1728.000 pixels) at (0.000 x 0.000) (310.000 x 170.000 mm) (12.205 x 6.693 in) (251.706 x 258.184 DPI)
+LOG: menuScale=1
+LOG: X11 main window is 640 x 498 maximized=0
+LOG: XRandR CRTC 0: pos=(0,0) size=(3072,1728) outputs=1
+LOG: Our window lies on this CRTC display (window pos=(1166,540) size=(640,498) match=(1486,789)).
+LOG:   Goes to output 0: name='eDP-1' size_mm=(310 x 170)
+LOG: Screen report: Method 'XRandR' (3072.000 x 1728.000 pixels) at (0.000 x 0.000) (310.000 x 170.000 mm) (12.205 x 6.693 in) (251.706 x 258.184 DPI)
+LOG: font texture id=2 will make 128 x 256
+LOG: X11 main window is 640 x 498 maximized=0
+LOG: XRandR CRTC 0: pos=(0,0) size=(3072,1728) outputs=1
+LOG: Our window lies on this CRTC display (window pos=(1166,540) size=(640,498) match=(1486,789)).
+LOG:   Goes to output 0: name='eDP-1' size_mm=(310 x 170)
+LOG: Screen report: Method 'XRandR' (3072.000 x 1728.000 pixels) at (0.000 x 0.000) (310.000 x 170.000 mm) (12.205 x 6.693 in) (251.706 x 258.184 DPI)
+LOG: WARNING: No translation support (to host) for code page 0
+LOG: DOS keyboard layout loaded with main language code US for layout us
+LOG: XMS: 50 handles allocated for use by the DOS environment
+LOG: EMS page frame at 0xe000-0xefff
+LOG: COMMAND.COM env size:             720 bytes
+LOG: COMMAND.COM environment block:    0x0701 sz=0x002d
+LOG: COMMAND.COM main body (PSP):      0x072f sz=0x009a
+LOG: COMMAND.COM stack:                0x0749
+LOG: SHELL:Redirect output to c:\src\build\log\m-messages.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-mapper.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-boot.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-bios.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-dos.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-command.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-attrib.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-assign.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-chkdsk.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-debug.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-edlin.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-exe2bin.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-find.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-fc.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-format.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-join.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-more.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-print.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-recover.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-sort.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-subst.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-sys.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-share.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-nlsfunc.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-ifsfunc.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-mem.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-filesys.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-backup.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-comp.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-diskcomp.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-diskcopy.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-fdisk.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-label.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-mode.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-restore.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-tree.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-replace.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-xcopy.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-graftabl.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-fastopen.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-append.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-graphics.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-keyb.txt
+LOG:  915652095 ERROR DOSMISC:DIRCACHE: FindFirst/Next: All slots full. Resetting
+LOG: SHELL:Redirect output to c:\src\build\log\m-country.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-ansi.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-keyboard.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-display.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-ega.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-lcd.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-printer.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-5202.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-driver.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-ramdrive.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-smartdrv.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-xma2ems.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-vdisk.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-xmaem.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-select.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-emm.txt
+LOG: SHELL:Redirect output to c:\src\build\log\m-memm.txt
+WARNING: Unknown option nologo (first parsing stage)
+>>> Collecting resulting binaries into build/bin...
+  io.sys  <= BIOS/IO.SYS
+  msdos.sys  <= DOS/MSDOS.SYS
+  command.com  <= CMD/COMMAND/COMMAND.COM
+  append.exe  <= CMD/APPEND/APPEND.EXE
+  assign.com  <= CMD/ASSIGN/ASSIGN.COM
+  attrib.exe  <= CMD/ATTRIB/ATTRIB.EXE
+  backup.com  <= CMD/BACKUP/BACKUP.COM
+  chkdsk.com  <= CMD/CHKDSK/CHKDSK.COM
+  comp.com  <= CMD/COMP/COMP.COM
+  debug.com  <= CMD/DEBUG/DEBUG.COM
+  diskcomp.com  <= CMD/DISKCOMP/DISKCOMP.COM
+  diskcopy.com  <= CMD/DISKCOPY/DISKCOPY.COM
+  edlin.com  <= CMD/EDLIN/EDLIN.COM
+  fdisk.exe  <= CMD/FDISK/FDISK.EXE
+  find.exe  <= CMD/FIND/FIND.EXE
+  format.com  <= CMD/FORMAT/FORMAT.COM
+  join.exe  <= CMD/JOIN/JOIN.EXE
+  label.com  <= CMD/LABEL/LABEL.COM
+  mem.exe  <= CMD/MEM/MEM.EXE
+  mode.com  <= CMD/MODE/MODE.COM
+  more.com  <= CMD/MORE/MORE.COM
+  print.com  <= CMD/PRINT/PRINT.COM
+  recover.com  <= CMD/RECOVER/RECOVER.COM
+  restore.com  <= CMD/RESTORE/RESTORE.COM
+  share.exe  <= CMD/SHARE/SHARE.EXE
+  sort.exe  <= CMD/SORT/SORT.EXE
+  subst.exe  <= CMD/SUBST/SUBST.EXE
+  sys.com  <= CMD/SYS/SYS.COM
+  tree.com  <= CMD/TREE/TREE.COM
+  xcopy.exe  <= CMD/XCOPY/XCOPY.EXE
+  keyb.com  <= CMD/KEYB/KEYB.COM
+  ansi.sys  <= DEV/ANSI/ANSI.SYS
+  display.sys  <= DEV/DISPLAY/DISPLAY.SYS
+  keyboard.sys  <= DEV/KEYBOARD/KEYBOARD.SYS
+  printer.sys  <= DEV/PRINTER/PRINTER.SYS
+  ramdrive.sys  <= DEV/RAMDRIVE/RAMDRIVE.SYS
+  smartdrv.sys  <= DEV/SMARTDRV/SMARTDRV.SYS
+  msboot.bin  <= BOOT/MSBOOT.BIN
+>>> Done. Binaries in build/bin/, build log in build/log/dosbox-build.log
+[PASS] 38/38 binaries collected 
+[PASS] boot essentials exact 33321 bin/io.sys;37376 bin/msdos.sys;37556 bin/command.com;
+[PASS] clean run did real work ≈400 .OBJ regenerated: 474
+[PASS] full rebuild evidenced in logs 54 non-empty of 59 (5 silent leaves + 1 8.3 collision are expected; LESS would be A10)
+[PASS] no fatal errors in logs none
+[PASS] no E_Exit in console 
+== Phase 3: floppy assembly ==
+>>> Creating blank 720 KiB FAT image...
+>>> Writing built MS-DOS 4.00 boot sector (BPB patched to 720K)...
+Patched MS-DOS 4.00 boot sector (720K BPB) into build/msdos400.img
+>>> Copying system files (IO.SYS/MSDOS.SYS must be first two entries)...
+>>> Copying utilities and drivers to \DOS...
+>>> Floppy image: build/msdos400.img
+ Volume in drive : has no label
+ Volume Serial Number is 0000-0000
+Directory for ::/
+
+IO       SYS     33321 2026-11-03  14:24 
+MSDOS    SYS     37376 2026-11-03  14:25 
+COMMAND  COM     37556 2026-11-03  14:25 
+DOS          <DIR>     2026-11-03  14:25 
+        4 files             108 253 bytes
+                             52 224 bytes free
+
+[PASS] image is 737,280 B 
+[PASS] size == 737280 (got 737280)
+[PASS] BPB = 720K FAT12 (512/2/1/2/112/1440/0xF9/3/9/2) (got (512, 2, 1, 2, 112, 1440, 249, 3, 9, 2))
+[PASS] boot sector 0 == msboot.bin tail except BPB-geometry offsets (diffs: 0x0d 0x11 0x12 0x13 0x14 0x15 0x16 0x18 0x1a 0x1c 0x24)
+[PASS] FAT1[0] == FAT2[0] == F9 FF FF (fat1=f9ffff fat2=f9ffff)
+[PASS] root order: IO=2 MSDOS=35 COMMAND=72 DOS=109 (got [('IO      SYS', 2), ('MSDOS   SYS', 35), ('COMMAND COM', 72), ('DOS        ', 109)])
+[PASS] \DOS holds 34 files (got 34)
+[PASS] 37/37 stored files byte-identical to bin/ originals (ok=37)
+---
+ALL GATES PASSED
+[PASS] inspect-image: ALL GATES 
+== Phase 4: boot proof (isolated copy) ==
+LOG: Early LOG Init complete
+LOG: "dummy" is not a valid value for variable: output.
+It might now be reset to the default value: default
+LOG: CONFIG: Loaded config file: /tmp/bt.conf
+LOG: DOSBox-X's working directory: /home/user/storage/microsoft/mydos/v4.0/src
+LOG: Logging init: beginning logging proper. This is the end of the early init logging
+LOG: Logging: No logfile was given. All further logging will be discarded.
+LOG: DOSBox-X version 2026.01.02 Commit 59915c1 (Linux SDL2 64-bit)
+LOG: Prevent capture: 0
+LOG: SDL: version 2.32.10, Video x11, Audio pulseaudio
+LOG: Host keyboard layout is now  ()
+LOG: Mapper keyboard layout is now  ()
+LOG: SDL2 reports desktop display mode 3072 x 1728
+LOG: The default output for the video system: opengl
+LOG: OpenGL Version : 4.6 (Compatibility Profile) Mesa 26.0.8-1ubuntu0.3
+LOG: Configured windowposition: -
+LOG: SDL: Current window pixel format: SDL_PIXELFORMAT_RGB888
+LOG: SDL: You are running in 24 bpp mode, this will slow down things!
+LOG: Releasing keyboard
+LOG: X11 main window is 640 x 400 maximized=0
+LOG: X11 extension XRANDR is available
+LOG: XRandR CRTC 0: pos=(0,0) size=(3072,1728) outputs=1
+LOG: Our window lies on this CRTC display (window pos=(1166,614) size=(640,400) match=(1486,814)).
+LOG:   Goes to output 0: name='eDP-1' size_mm=(310 x 170)
+LOG: Screen report: Method 'XRandR' (3072.000 x 1728.000 pixels) at (0.000 x 0.000) (310.000 x 170.000 mm) (12.205 x 6.693 in) (251.706 x 258.184 DPI)
+LOG: WARNING: DOS/V is only supported for VGA video cards.
+LOG: ISA BCLK: 8333333.333Hz (25000000/3)
+LOG: monopal: green, 
+LOG: Active save slot: 1 [Empty]
+LOG: USING AVI+ZMBV
+LOG: Max 1073741824 sz 16384
+LOG: Final 16384
+LOG: Final arrangement: Below 4GB = 16384KB, Above 4GB = 0KB
+LOG: ALSA seq enum: id=0 name="System" ports=2 type="kernel"
+LOG: ALSA seq enum: id=14 name="Midi Through" ports=1 type="kernel"
+LOG: ALSA seq enum: id=128 name="Client-128" ports=0 type="user"
+LOG: ALSA seq enum: id=144 name="PipeWire-System" ports=1 type="user"
+LOG: ALSA seq enum: id=145 name="PipeWire-RT-Event" ports=1 type="user"
+LOG: SDLNet_TCP_Open: Couldn't connect to remote host
+LOG: TiMidity: can't open control connection (host=127.0.0.1, port=7777)
+LOG: MIDI:fluidsynth: SoundFont not specified, and no system SoundFont found
+LOG: MIDI:synth: Specify .SF2 sound font file with midiconfig=
+LOG: MT32: failed to locate ROMs.
+LOG: MT32 emulation requires the PCM and CONTROL ROM files.
+LOG: To eliminate this error message, check the DOSBox-X wiki.
+LOG: The ROM files are: CM32L_CONTROL.ROM and CM32L_PCM.ROM or MT32_CONTROL.ROM and MT32_PCM.ROM
+LOG: MIDI:Opened device:none
+LOG: VOODOO LFB now at d0000000
+LOG: Serial1: BASE 3f8h
+LOG: Serial: port 1 will write to file /tmp/com1.txt
+LOG: Serial2: BASE 2f8h
+LOG: Parallel1: BASE 378h
+LOG: MPU-401 Registering I/O ports as if IBM PC MPU-401 at base 330h
+LOG: Memory I/O complexity optimization enabled aka option 'memory io optimization 1'. If the game or demo is unable to draw to the screen properly, set the option to false.
+LOG: The 'scanline render on demand' option is available and may provide a modest boost in video render performance if set to true.
+LOG: GetDesktopResolution reading X11 desktop resolution
+LOG: Root window (ID 1033) is 3072 x 1728
+LOG: X11 main window is 640 x 400 maximized=0
+LOG: XRandR CRTC 0: pos=(0,0) size=(3072,1728) outputs=1
+LOG: Our window lies on this CRTC display (window pos=(1166,614) size=(640,400) match=(1486,814)).
+LOG:   Goes to output 0: name='eDP-1' size_mm=(310 x 170)
+LOG: Screen report: Method 'XRandR' (3072.000 x 1728.000 pixels) at (0.000 x 0.000) (310.000 x 170.000 mm) (12.205 x 6.693 in) (251.706 x 258.184 DPI)
+LOG: Allocated APM BIOS pm entry point at f000:ce20
+LOG: Writing code to fce20
+LOG: Writing code to fce40
+LOG: X11 main window is 640 x 400 maximized=0
+LOG: XRandR CRTC 0: pos=(0,0) size=(3072,1728) outputs=1
+LOG: Our window lies on this CRTC display (window pos=(1166,540) size=(640,400) match=(1486,740)).
+LOG:   Goes to output 0: name='eDP-1' size_mm=(310 x 170)
+LOG: Screen report: Method 'XRandR' (3072.000 x 1728.000 pixels) at (0.000 x 0.000) (310.000 x 170.000 mm) (12.205 x 6.693 in) (251.706 x 258.184 DPI)
+LOG: ISA Plug & Play BIOS enabled
+LOG: pixratio 1.200, dw false, dh true
+LOG: Aspect ratio: 640 x 480  xToY=1.333 yToX=0.750
+LOG: menuScale=1
+LOG: X11 main window is 640 x 400 maximized=0
+LOG: XRandR CRTC 0: pos=(0,0) size=(3072,1728) outputs=1
+LOG: Our window lies on this CRTC display (window pos=(1166,540) size=(640,400) match=(1486,740)).
+LOG:   Goes to output 0: name='eDP-1' size_mm=(310 x 170)
+LOG: Screen report: Method 'XRandR' (3072.000 x 1728.000 pixels) at (0.000 x 0.000) (310.000 x 170.000 mm) (12.205 x 6.693 in) (251.706 x 258.184 DPI)
+LOG: font texture id=2 will make 128 x 256
+LOG: X11 main window is 640 x 400 maximized=0
+LOG: XRandR CRTC 0: pos=(0,0) size=(3072,1728) outputs=1
+LOG: Our window lies on this CRTC display (window pos=(1166,540) size=(640,400) match=(1486,740)).
+LOG:   Goes to output 0: name='eDP-1' size_mm=(310 x 170)
+LOG: Screen report: Method 'XRandR' (3072.000 x 1728.000 pixels) at (0.000 x 0.000) (310.000 x 170.000 mm) (12.205 x 6.693 in) (251.706 x 258.184 DPI)
+LOG: WARNING: No translation support (to host) for code page 0
+LOG: DOS keyboard layout loaded with main language code US for layout us
+LOG: XMS: 50 handles allocated for use by the DOS environment
+LOG: EMS page frame at 0xe000-0xefff
+LOG: COMMAND.COM env size:             720 bytes
+LOG: COMMAND.COM environment block:    0x0701 sz=0x002d
+LOG: COMMAND.COM main body (PSP):      0x072f sz=0x009a
+LOG: COMMAND.COM stack:                0x0749
+LOG: Identified '/tmp/test.img' as C/H/S 80/2/9 512 bytes/sector
+LOG: Mounted FAT volume is FAT12 with 713 clusters
+LOG: Booting guest OS stack_seg=0x7000 load_seg=0x07c0
+LOG: Removing UMB block 0xc800-0xdfff
+LOG: Alright: DOS kernel shutdown, booting a guest OS
+LOG:   CS:IP=0000:7c00 SS:SP=7000:0100 AX=0000 BX=7c00 CX=0001 DX=0000
+LOG:  117475789 ERROR BIOS:Disk 2 not active
+LOG:  117475932 ERROR BIOS:Disk 1 not active
+LOG:  117475965 ERROR BIOS:Disk 1 not active
+LOG:  117476145 ERROR BIOS:INT15:Unknown call ax=4100
+LOG: File /tmp/com1.txt for serial port closed.
+[PASS] PROOF1 serial BOOT-OK 
+[PASS] PROOF2 write-back MARKER.TXT 
+[PASS] deliverable untouched by boot test 
+== Phase 5: deliver ==
+2fb93021313c518344898cf999713fa175ce8ad5e036a569770e314ea255cba2  build/msdos400.img
+ Volume in drive : has no label
+ Volume Serial Number is 0000-0000
+Directory for ::/
+
+IO       SYS     33321 2026-11-03  14:24 
+MSDOS    SYS     37376 2026-11-03  14:25 
+COMMAND  COM     37556 2026-11-03  14:25 
+DOS          <DIR>     2026-11-03  14:25 
+        4 files             108 253 bytes
+== wall time: 1542 s — see build/BUILD-REPORT.txt ==
+gates passed: 23
