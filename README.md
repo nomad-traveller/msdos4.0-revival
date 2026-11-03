@@ -54,6 +54,18 @@ See `src/build/README-BUILD.md` for the step-by-step pipeline.
 These sources are 16-bit x86 and run only inside a 16-bit DOS emulation environment.
 They are provided for study, build experiments, and OS-history context.
 
+## Output of a successful build
+
+After `bash build/walkthrough.sh` (or the manual pipeline) succeeds, the deliverable is a
+**single 720 KiB FAT12 floppy image**:
+
+```
+v4.0/src/build/msdos400.img
+```
+
+The build boots via `IO.SYS` → `MSDOS.SYS` → `COMMAND.COM` and includes the utilities
+under `\\DOS` (see `src/build/README-BUILD.md`).
+
 ## Licence
 
 MIT — original copyright notice in `LICENSE` must be retained in any copy or substantial
