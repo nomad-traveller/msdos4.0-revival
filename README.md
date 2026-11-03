@@ -54,6 +54,19 @@ See `src/build/README-BUILD.md` for the step-by-step pipeline.
 These sources are 16-bit x86 and run only inside a 16-bit DOS emulation environment.
 They are provided for study, build experiments, and OS-history context.
 
+## Prerequisites
+
+Runs under Linux (tested with DOSBox-X 2026.01.02 + SDL2):
+
+- `dosbox-x`
+- `mtools` (`mcopy`, `mdir`, ...)
+- `dosfstools` (`mkfs.fat`)
+- `python3`
+- `git`, `sha256sum`, `timeout`, `awk`, `stat` (used by the walkthrough gates)
+
+Install example (Debian/Ubuntu):
+`sudo apt install dosbox-x mtools dosfstools python3 git coreutils`
+
 ## Output of a successful build
 
 After `bash build/walkthrough.sh` (or the manual pipeline) succeeds, the deliverable is a
