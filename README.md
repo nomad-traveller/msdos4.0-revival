@@ -79,6 +79,20 @@ v4.0/src/build/msdos400.img
 The build boots via `IO.SYS` → `MSDOS.SYS` → `COMMAND.COM` and includes the utilities
 under `\\DOS` (see `src/build/README-BUILD.md`).
 
+## Running the produced image
+
+Test the build in DOSBox-X (boots straight from the image):
+
+```bash
+dosbox-x -fda v4.0/src/build/msdos400.img
+```
+
+Or write it to a real floppy/USB:
+
+```bash
+dd if=v4.0/src/build/msdos400.img of=/dev/fd0 bs=512 status=progress
+```
+
 ## Licence
 
 MIT — original copyright notice in `LICENSE` must be retained in any copy or substantial
