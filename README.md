@@ -1,5 +1,29 @@
 # MS-DOS 4.00 Source (revival)
 
+## Introduction
+
+This repository is a source-preservation and build-revival project for MS-DOS 4.00 —
+the 1988/89 IBM/Microsoft 16-bit DOS sources. It contains the full original tree:
+BIOS (IO.SYS), kernel (DOS/ MSDOS.SYS), boot sector (BOOT/MSBOOT.ASM), commands
+(COMMAND.COM, FORMAT, FDISK, ATTRIB, ...), device drivers (SMARTDRV, RAMDRIVE, ANSI, ...),
+the NLS mapper, MEMM/EMM managers, and the shipped 1988 16-bit toolchain
+(MASM, LINK, MS C 2.x, NMAKE) under `src/TOOLS/` — MIT-licensed as released by
+Microsoft/IBM.
+
+Its purpose is to prove the sources still work: `src/build/walkthrough.sh` runs the
+original DOS toolchain inside DOSBox-X on Linux, gates each phase, and produces a
+bootable 720 KiB FAT12 floppy image (`build/msdos400.img`) that boots
+IO.SYS → MSDOS.SYS → COMMAND.COM with utilities under `\DOS`. The build plan
+(`src/build_plan.md`) is even written as an instruction set for an autonomous agent —
+no human intervention needed. Per the build report, the pipeline has already succeeded:
+38/38 binaries rebuilt, image gates passed, boot proof captured via serial.
+
+In short: an OS-history project — a clean mirror of the MS-DOS 4.00 sources, plus the
+proof that they compile and boot a real DOS 4.00 floppy from scratch. Not for production
+use (16-bit, emulated only).
+
+---
+
 A clean, source-only mirror of the MS-DOS 4.00 tree — the IBM/Microsoft 1988/89 16-bit
 sources. **No build intermediates, no generated images, no logs** are checked in. Only
 source code and build scripts (`*.asm`, `*.inc`, `*.c`, `*.h`, Makefiles, INF/INI, `.bat`,
