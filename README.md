@@ -8,7 +8,8 @@ BIOS (IO.SYS), kernel (DOS/ MSDOS.SYS), boot sector (BOOT/MSBOOT.ASM), commands
 (COMMAND.COM, FORMAT, FDISK, ATTRIB, ...), device drivers (SMARTDRV, RAMDRIVE, ANSI, ...),
 the NLS mapper, MEMM/EMM managers, and the shipped 1988 16-bit toolchain
 (MASM, LINK, MS C 2.x, NMAKE) under `src/TOOLS/` — MIT-licensed as released by
-Microsoft/IBM.
+Microsoft/IBM. The upstream sources live at
+[github.com/microsoft/ms-dos](https://github.com/microsoft/ms-dos).
 
 Its purpose is to prove the sources still work: `src/build/walkthrough.sh` runs the
 original DOS toolchain inside DOSBox-X on Linux, gates each phase, and produces a
@@ -41,7 +42,8 @@ source code and build scripts (`*.asm`, `*.inc`, `*.c`, `*.h`, Makefiles, INF/IN
 
 ## Prerequisites
 
-Runs under Linux (tested with DOSBox-X 2026.01.02 + SDL2):
+Runs under Linux (tested with DOSBox-X 2026.01.02 + SDL2). **Only Ubuntu ≥ 24.04 has
+been tested** — no other distributions or releases are known to work.
 
 - `dosbox-x`
 - `mtools` (`mcopy`, `mdir`, ...)
@@ -126,6 +128,36 @@ Or write it to a real floppy/USB:
 ```bash
 dd if=v4.0/src/build/msdos400.img of=/dev/fd0 bs=512 status=progress
 ```
+
+## Outlook — future challenges
+
+DOS 4.00 was the demonstration. What could come next:
+
+- **Going older: MS-DOS 1.25 and 2.0.** Microsoft's public repo
+  (github.com/microsoft/ms-dos) contains the source of both. The natural next
+  step is applying the same proven pipeline — DOSBox-X build, gates, bootable
+  image — to these much older trees.
+
+- **The sources stay untouched.** The original code stands as shipped. Revival
+  work lives strictly in build scripts and the reproducible pipeline — the
+  sources are for reference only.
+
+- **Toolchain reality: no byte-exact reference build.** For DOS 4.00 the
+  pipeline uses the shipped 16-bit toolchain (MASM 5.x, LINK 3, EXE2BIN from
+  the 4.0 tree). Older toolchains would be needed to reproduce the original
+  published binaries bit-for-bit, and reactivating them has so far not
+  succeeded. The same constraints will apply for 1.25/2.0: builds will be
+  gated by behavior (boot proof, disk-image gates), not by byte comparison
+  against the shipped binaries.
+
+- **A benchmark across different LLMs.** This build was a demonstration of
+  what AI can do today, in about six hours. Running the same mission
+  (`build_plan.md` as-is) with other LLMs would make capability comparison
+  measurable: time to first boot, number of gates failed, quality of failure
+  recovery.
+
+- **Emulator and hardware breadth** — carry the gates to VirtualBox, 86Box,
+  or real hardware serial boot.
 
 ## Licence
 
