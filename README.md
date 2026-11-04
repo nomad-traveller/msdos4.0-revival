@@ -24,12 +24,13 @@ use (16-bit, emulated only).
 
 ## How this repository was built
 
-This repository was created entirely by AI — specifically **GLM-5.3-flash** — in roughly
-**6 hours of work**. The agent eliminated all pitfalls and quirks in the sources
-(**without reading any source code**), established the complete build pipeline, and
-verified the toolchain end-to-end: the shipped 1988 toolchain was set up and
-proven by running the build inside DOSBox-X until every gate passed and the
-resulting floppy booted (`BOOT-OK`). No human intervention was needed at any step.
+This repository was built by AI — specifically **GLM-5.3-flash** — in roughly **6 hours
+of work**, driven by a human who provided the task, advice and guardrails throughout.
+The user did not read any source code; the AI did — to find and eliminate the pitfalls
+and quirks in the sources, mostly wrong characters and symbol definitions. The AI also
+established and verified the complete build pipeline: the shipped 1988 toolchain was
+set up, exercised and proven by running the build inside DOSBox-X until every gate
+passed and the resulting floppy booted (`BOOT-OK`).
 
 ---
 
