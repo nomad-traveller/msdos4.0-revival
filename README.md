@@ -22,6 +22,15 @@ In short: an OS-history project — a clean mirror of the MS-DOS 4.00 sources, p
 proof that they compile and boot a real DOS 4.00 floppy from scratch. Not for production
 use (16-bit, emulated only).
 
+## How this repository was built
+
+This repository was created entirely by AI — specifically **GLM-5.3-flash** — in roughly
+**6 hours of work**. The agent eliminated all pitfalls and quirks in the sources
+(**without reading any source code**), established the complete build pipeline, and
+verified the toolchain end-to-end: the shipped 1988 toolchain was set up and
+proven by running the build inside DOSBox-X until every gate passed and the
+resulting floppy booted (`BOOT-OK`). No human intervention was needed at any step.
+
 ---
 
 A clean, source-only mirror of the MS-DOS 4.00 tree — the IBM/Microsoft 1988/89 16-bit
